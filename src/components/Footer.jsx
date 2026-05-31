@@ -30,7 +30,7 @@ export default function Footer() {
 
         <div className="mt-4 text-center">
           <span className="font-code text-[10px] text-outline-variant tracking-widest uppercase">
-            <span className="text-secondary-container">$</span> echo "AI is friend" <span className="animate-pulse">▊</span>
+            <span className="text-secondary-container">$</span> echo "kata guah AI is friend" <span className="animate-pulse">▊</span>
           </span>
         </div>
       </div>
