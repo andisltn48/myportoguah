@@ -3,7 +3,7 @@ export default function About() {
     { label: 'location', value: 'Balikpapan, Indonesia' },
     { label: 'experience', value: '5+ years' },
     { label: 'focus', value: 'Full-Stack & Backend Development' },
-    { label: 'education', value: 'B.Eng. Informatics Engineering' },
+    { label: 'education', value: 'Informatics' },
     { label: 'status', value: 'Open for projects & collaborations' },
     { label: 'tech', value: 'PHP, Java, Python, Docker, Git, Etc.' },
   ]
