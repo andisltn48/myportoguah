@@ -8,7 +8,7 @@ export default function Contact() {
               &lt;contact /&gt;
             </h2>
             <p className="font-body text-lg text-on-surface-variant">
-              Have a project in mind? Let's build something pixel-perfect together.
+              Have a project in mind? Let's build something or Work together.
             </p>
           </div>
 
