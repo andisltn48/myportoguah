@@ -5,7 +5,7 @@ export default function About() {
     { label: 'focus', value: 'Full-Stack & Backend Development' },
     { label: 'education', value: 'Informatics' },
     { label: 'status', value: 'Open for projects & collaborations' },
-    { label: 'tech', value: 'PHP, Java, Python, Docker, Git, Etc.' },
+    { label: 'tech', value: 'PHP, WP, Java, Python, Docker, Git, Etc.' },
   ]
 
   const stats = [
