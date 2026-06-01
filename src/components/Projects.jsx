@@ -11,7 +11,7 @@ const projects = [
     desc: 'Photobooth website with real-time photo capture and editing capabilities.',
     tags: ['Laravel', 'Blade', 'MySQL', 'Midtrans'],
     stars: '',
-    url: 'https://capturah.beraksigo.com/',
+    url: 'https://capturah.my.id/',
   },
   {
     title: 'Kamaracam',
