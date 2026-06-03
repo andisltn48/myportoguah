@@ -1,24 +1,10 @@
 const projects = [
   {
-    title: 'PropertyU',
-    desc: 'A modern real estate platform for property listings and management.',
-    tags: ['Laravel', 'Blade', 'MySQL', '3D Visualization'],
-    stars: '',
-    url: 'https://propertyu.beraksigo.com/',
-  },
-  {
     title: 'Capturah',
     desc: 'Photobooth website with real-time photo capture and editing capabilities.',
     tags: ['Laravel', 'Blade', 'MySQL', 'Midtrans'],
     stars: '',
     url: 'https://capturah.my.id/',
-  },
-  {
-    title: 'Kamaracam',
-    desc: 'Web application to showcase camera equipment and rental services.',
-    tags: ['Spring Boot', 'Next.js', 'PostgreSQL'],
-    stars: '',
-    url: 'https://drive.google.com/drive/folders/1t4MIHOlBlaeDw2yOowEm8FXBZD87yAoM?usp=sharing',
   },
   {
     title: 'AdminWorpress',
@@ -28,11 +14,32 @@ const projects = [
     url: 'https://github.com/andisltn48/adminwordpress',
   },
   {
+    title: 'PropertyU',
+    desc: 'A modern real estate platform for property listings and management.',
+    tags: ['Laravel', 'Blade', 'MySQL', '3D Visualization'],
+    stars: '',
+    url: 'https://propertyu.beraksigo.com/',
+  },
+  {
+    title: 'Tanyakontrak.AI',
+    desc: 'Web application for summarizing and answering contract-related questions.',
+    tags: ['Python (FastAPI)', 'React 19', 'PostgreSQL', 'Gemini API', 'Redis'],
+    stars: '',
+    url: 'https://drive.google.com/drive/folders/1a99m9UQopVRJdU5uGJSE2FGQR43G5gyF?usp=sharing',
+  },
+  {
     title: 'CariKopi',
     desc: 'Web application for finding and reviewing local coffee shops.',
     tags: ['Spring Boot', 'Next.js', 'PostgreSQL', 'Xendit'],
     stars: '',
     url: 'https://drive.google.com/drive/folders/1wZOdF1auRnzqwehOyMGWjdFj4CKOKyPB?usp=sharing',
+  },
+  {
+    title: 'Kamaracam',
+    desc: 'Web application to showcase camera equipment and rental services.',
+    tags: ['Spring Boot', 'Next.js', 'PostgreSQL'],
+    stars: '',
+    url: 'https://drive.google.com/drive/folders/1t4MIHOlBlaeDw2yOowEm8FXBZD87yAoM?usp=sharing',
   },
 ]
 
