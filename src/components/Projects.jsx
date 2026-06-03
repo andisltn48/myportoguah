@@ -1,3 +1,10 @@
+import { GitHubCalendar } from 'react-github-calendar'
+
+const contributionTheme = {
+  light: ['#ebedf0', '#9be9a8', '#40c463', '#30a14e', '#216e39'],
+  dark: ['#0b141c', '#0c2e2a', '#0d4d3f', '#0e7558', '#00eefc'],
+}
+
 const projects = [
   {
     title: 'Capturah',
@@ -104,6 +111,30 @@ export default function Projects() {
           ))}
         </div>
 
+        <div className="mt-24 pt-24 border-t border-outline-variant/10">
+          <div className="text-center mb-12">
+            <h2 className="font-display text-sm font-bold text-secondary-container tracking-[0.2em] uppercase mb-4">
+              &lt;contributions /&gt;
+            </h2>
+            <p className="font-body text-lg text-on-surface-variant max-w-2xl mx-auto">
+              Open source contributions across the year.
+            </p>
+          </div>
+
+          <div className="flex justify-center px-4">
+            <GitHubCalendar
+              username="andisltn48"
+              theme={contributionTheme}
+              blockSize={13}
+              blockMargin={4}
+              fontSize={14}
+              hideColorLegend={false}
+              hideMonthLabels={false}
+              hideTotalCount={false}
+            />
+          </div>
+        </div>
+
         <div className="text-center mt-12">
           <a
             href="https://github.com/andisltn48?tab=repositories"
@@ -117,6 +148,8 @@ export default function Projects() {
             View All on GitHub
           </a>
         </div>
+
+        
       </div>
     </section>
   )
