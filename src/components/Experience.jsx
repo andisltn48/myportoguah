@@ -106,7 +106,7 @@ export default function Experience() {
     <section id="work" className="py-24 lg:py-32">
       <div className="max-w-[1100px] mx-auto px-4 lg:px-16">
         <div className="text-center mb-16">
-          <h2 className="font-display text-sm font-bold text-secondary-container tracking-[0.2em] uppercase mb-4">
+          <h2 className="font-display text-sm font-bold text-primary tracking-[0.2em] uppercase mb-4">
             &lt;experience /&gt;
           </h2>
           <p className="font-body text-lg text-on-surface-variant max-w-2xl mx-auto">
@@ -115,7 +115,7 @@ export default function Experience() {
         </div>
 
         <div className="max-w-3xl mx-auto relative">
-          <div className="absolute left-4 top-0 bottom-0 w-[2px] bg-outline-variant/30 z-10" />
+          <div className="absolute left-4 top-0 bottom-0 w-[2px] bg-outline/30 z-10" />
 
           <div
             className="relative overflow-hidden"
@@ -135,17 +135,17 @@ export default function Experience() {
                 <div
                   key={index}
                   ref={(el) => (itemsRef.current[index] = el)}
-                  className="experience-item relative pl-12 group"
+                  className="relative pl-12 group"
                 >
-                  <div className="absolute left-2 top-1 w-5 h-5 bg-surface border-2 border-secondary-container flex items-center justify-center group-hover:bg-secondary-container transition-colors duration-300 z-10">
-                    <span className="w-2 h-2 bg-on-surface" />
+                  <div className="absolute left-2 top-1 w-5 h-5 bg-surface border-2 border-primary rounded-full flex items-center justify-center group-hover:bg-primary transition-colors duration-300 z-10">
+                    <span className="w-2 h-2 bg-white rounded-full" />
                   </div>
 
-                  <div className="bg-surface-container border border-outline-variant/20 p-6 hover:border-secondary-container/30 transition-all duration-300">
+                  <div className="bg-surface-container border border-outline-variant/20 rounded-md p-6 group-hover:border-primary/50 group-hover:scale-[1.02] transition-all duration-300">
                     <div className="flex flex-col sm:flex-row sm:items-center justify-between gap-2 mb-4">
                       <div>
-                        <h3 className="font-display text-lg font-bold text-on-surface">{exp.role}</h3>
-                        <span className="font-body text-sm text-secondary-container">{exp.company}</span>
+                        <h3 className="font-display text-lg font-bold text-white">{exp.role}</h3>
+                        <span className="font-body text-sm text-primary">{exp.company}</span>
                       </div>
                       <span className="font-code text-[11px] text-on-surface-variant/60 tracking-wider">{exp.period}</span>
                     </div>
@@ -153,7 +153,7 @@ export default function Experience() {
                     <ul className="space-y-2">
                       {exp.highlights.map((h, i) => (
                         <li key={i} className="flex items-start gap-3 font-body text-sm text-on-surface-variant leading-relaxed">
-                          <span className="w-1.5 h-1.5 bg-secondary-container mt-2 shrink-0" />
+                          <span className="w-1.5 h-1.5 bg-primary mt-2 shrink-0 rounded-full" />
                           {h}
                         </li>
                       ))}
@@ -167,7 +167,7 @@ export default function Experience() {
           <div className="flex justify-center gap-4 mt-8">
             <button
               onClick={prev}
-              className="px-4 py-2 border border-outline-variant text-on-surface-variant font-code text-xs hover:border-secondary-container hover:text-secondary-container transition-colors"
+              className="px-4 py-2 border border-outline text-on-surface-variant font-code text-xs rounded hover:border-primary hover:text-primary transition-colors"
             >
               &larr; Prev
             </button>
@@ -176,7 +176,7 @@ export default function Experience() {
             </span>
             <button
               onClick={next}
-              className="px-4 py-2 border border-outline-variant text-on-surface-variant font-code text-xs hover:border-secondary-container hover:text-secondary-container transition-colors"
+              className="px-4 py-2 border border-outline text-on-surface-variant font-code text-xs rounded hover:border-primary hover:text-primary transition-colors"
             >
               Next &rarr;
             </button>
