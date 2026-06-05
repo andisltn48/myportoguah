@@ -29,7 +29,7 @@ export default function Hero() {
         <div className="absolute inset-0 bg-gradient-to-r from-surface via-surface/50 to-transparent z-10" />
         <div className="absolute inset-0 bg-gradient-to-t from-surface via-transparent to-transparent z-10" />
         <img
-          src="/DSC08770.JPG"
+          src="/foto.jpeg"
           alt=""
           className="h-full w-full object-cover object-center opacity-90"
         />
