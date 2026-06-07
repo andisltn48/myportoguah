@@ -3,6 +3,7 @@ import { useEffect, useRef, useState } from 'react'
 export default function Hero() {
   const sectionRef = useRef(null)
   const [showVideo, setShowVideo] = useState(false)
+  const [showScrollTop, setShowScrollTop] = useState(false)
 
   useEffect(() => {
     if (!showVideo) return
@@ -28,7 +29,18 @@ export default function Hero() {
     )
 
     if (sectionRef.current) observer.observe(sectionRef.current)
-    return () => observer.disconnect()
+
+    const handleScroll = () => {
+      const heroHeight = sectionRef.current?.offsetHeight || 0
+      setShowScrollTop(window.scrollY > heroHeight * 0.8)
+    }
+    window.addEventListener('scroll', handleScroll, { passive: true })
+    handleScroll()
+
+    return () => {
+      observer.disconnect()
+      window.removeEventListener('scroll', handleScroll)
+    }
   }, [])
 
   return (
@@ -100,6 +112,18 @@ export default function Hero() {
           </svg>
         </a>
       </div>
+
+      {showScrollTop && (
+        <button
+          onClick={() => window.scrollTo({ top: 0, behavior: 'smooth' })}
+          className="fixed bottom-6 right-6 z-40 p-3 bg-primary text-white rounded-full shadow-lg hover:bg-[#f40612] transition-all duration-300"
+          aria-label="Scroll to top"
+        >
+          <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" strokeWidth="2.5" strokeLinecap="round">
+            <path d="M18 15l-6-6-6 6" />
+          </svg>
+        </button>
+      )}
 
       {showVideo && (
         <div
