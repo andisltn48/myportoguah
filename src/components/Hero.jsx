@@ -1,7 +1,17 @@
-import { useEffect, useRef } from 'react'
+import { useEffect, useRef, useState } from 'react'
 
 export default function Hero() {
   const sectionRef = useRef(null)
+  const [showVideo, setShowVideo] = useState(false)
+
+  useEffect(() => {
+    if (!showVideo) return
+    const handleKeyDown = (e) => {
+      if (e.key === 'Escape') setShowVideo(false)
+    }
+    document.addEventListener('keydown', handleKeyDown)
+    return () => document.removeEventListener('keydown', handleKeyDown)
+  }, [showVideo])
 
   useEffect(() => {
     const observer = new IntersectionObserver(
@@ -64,6 +74,15 @@ export default function Hero() {
                 <path d="M8 5v14l11-7z" />
               </svg>
             </a>
+            <button
+              onClick={() => setShowVideo(true)}
+              className="inline-flex items-center gap-2 px-6 py-3 border border-primary text-primary font-semibold text-sm rounded hover:bg-primary hover:text-white transition-all duration-300"
+            >
+              <svg width="16" height="16" viewBox="0 0 24 24" fill="currentColor">
+                <path d="M8 5v14l11-7z" />
+              </svg>
+              Play Introduction
+            </button>
             <a
               href="#contact"
               className="inline-flex items-center gap-2 px-6 py-3 border border-[#b3b3b3] text-[#b3b3b3] font-semibold text-sm rounded hover:border-white hover:text-white transition-all duration-300"
@@ -81,6 +100,29 @@ export default function Hero() {
           </svg>
         </a>
       </div>
+
+      {showVideo && (
+        <div
+          className="fixed inset-0 z-50 flex items-center justify-center bg-black/80 backdrop-blur-sm"
+          onClick={() => setShowVideo(false)}
+        >
+          <div className="relative w-full max-w-4xl mx-4" onClick={(e) => e.stopPropagation()}>
+            <button
+              onClick={() => setShowVideo(false)}
+              className="absolute -top-10 right-0 text-white/70 hover:text-white text-sm transition-colors"
+            >
+              Close (Esc)
+            </button>
+            <video
+              className="w-full rounded-lg shadow-2xl"
+              src="/introduction.mp4"
+              controls
+              autoPlay
+              playsInline
+            />
+          </div>
+        </div>
+      )}
     </section>
   )
 }
